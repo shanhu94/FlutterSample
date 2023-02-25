@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_browser/view/home/home_view.dart';
 
 class TabView extends StatefulWidget {
   const TabView({super.key});
@@ -8,47 +9,42 @@ class TabView extends StatefulWidget {
 }
 
 class _TabViewState extends State<TabView> {
-
   int pageIndex = 0;
+  HomeViewStyle style = HomeViewStyle.list;
 
   List<TabPage> get tabPage => [
-    TabPage(
-      title: '首页',
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('lkajsdlkfjad World'),
-            Text('Line')
-          ]
-        ),
-      )
-    ),
-    TabPage(
-      title: '聊天',
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Hello World'),
-            Text('Line')
-          ]
-        ),
-      )
-    ),
-    TabPage(
-      title: '我的',
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text('Hello World'),
-            Text('Line')
-          ]
-        ),
-      )
-    ),
-  ];
+        TabPage(
+            title: '首页',
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    setState(() {
+                      style = style.next();
+                    });
+                  },
+                  icon: Icon(
+                    Icons.change_circle_outlined,
+                    color: Theme.of(context).colorScheme.onBackground,
+                  ))
+            ],
+            body: HomeView(
+              style: style,
+            )),
+        TabPage(
+            title: '聊天',
+            body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [Text('Hello World'), Text('Line')]),
+            )),
+        TabPage(
+            title: '我的',
+            body: Center(
+              child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [Text('Hello World'), Text('Line')]),
+            )),
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +53,7 @@ class _TabViewState extends State<TabView> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(tabPage[pageIndex].title),
+        actions: tabPage[pageIndex].actions,
         backgroundColor: Theme.of(context).colorScheme.background,
       ),
       body: Container(
@@ -83,6 +80,7 @@ class _TabViewState extends State<TabView> {
 
 class TabPage {
   final String title;
+  List<Widget>? actions;
   Widget body;
-  TabPage({required this.title, required this.body});
+  TabPage({required this.title, required this.body, this.actions});
 }

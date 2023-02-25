@@ -10,11 +10,13 @@ class ThemeManager {
   static ThemeData themeForKey(ThemeKey key) {
     return ThemeData(
       colorScheme: const ColorScheme(
-        primary: const Color(0xff0f0f0f),
+        primary: Color(0xff0f0f0f),
         onPrimary: Colors.white,
+        primaryContainer: Color(0xff4E4E4E),
+        onPrimaryContainer: Colors.white,
         secondary: Colors.white,
         onSecondary: Colors.white,
-        background: const Color(0xff1b1b1b),
+        background: Color(0xff1b1b1b),
         onBackground: Colors.white,
         error: Colors.red,
         onError: Colors.red,
