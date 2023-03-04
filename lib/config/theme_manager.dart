@@ -16,6 +16,8 @@ class ThemeManager {
         onPrimaryContainer: Colors.white,
         secondary: Colors.white,
         onSecondary: Colors.white,
+        secondaryContainer: Color(0xff303030),
+        onSecondaryContainer: Colors.white,
         background: Color(0xff1b1b1b),
         onBackground: Colors.white,
         error: Colors.red,
@@ -24,6 +26,7 @@ class ThemeManager {
         surface: Colors.white,
         onSurface: Colors.white,
       ),
+      
     );
   }
 }

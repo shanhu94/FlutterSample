@@ -1,9 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:product_browser/config/theme_manager.dart';
+import 'package:product_browser/model/chat/message/chat_message_model.dart';
+import 'package:product_browser/model/user/user.dart';
 import 'package:product_browser/view/tabview.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const PBApp());
+  Provider.debugCheckInvalidValueType = null;
+  runApp(MultiProvider(
+    providers: [
+      Provider(create: (_) => User()),
+    ],
+    child: const PBApp(),
+  ));
 }
 
 class PBApp extends StatefulWidget {
@@ -14,8 +23,13 @@ class PBApp extends StatefulWidget {
 }
 
 class _PBAppState extends State<PBApp> {
-
   ThemeKey themeKey = ThemeKey.dark;
+
+  @override
+  void initState() {
+    super.initState();
+    context.read<User>().changeUid('1');
+  }
 
   @override
   Widget build(BuildContext context) {

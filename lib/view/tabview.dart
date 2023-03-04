@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:product_browser/view/chat/chat_view.dart';
 import 'package:product_browser/view/home/home_view.dart';
 
 class TabView extends StatefulWidget {
@@ -31,12 +32,9 @@ class _TabViewState extends State<TabView> {
               style: style,
             )),
         TabPage(
-            title: '聊天',
-            body: Center(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [Text('Hello World'), Text('Line')]),
-            )),
+          title: '聊天',
+          body: const ChatView(),
+        ),
         TabPage(
             title: '我的',
             body: Center(

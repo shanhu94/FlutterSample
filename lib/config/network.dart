@@ -6,6 +6,8 @@ class NetworkPath {
   const NetworkPath(this.path);
   static NetworkPath get homeList => const NetworkPath('jsons/home.json');
   static NetworkPath get homeDetail => const NetworkPath('jsons/homeDetail.json');
+  static NetworkPath get chatList => const NetworkPath('jsons/chatList.json');
+  static NetworkPath get messageList => const NetworkPath('jsons/messageList.json');
 }
 
 class Network {
@@ -18,9 +20,13 @@ class Network {
   Future<dynamic> get(NetworkPath path) async {
     final request = await client.getUrl(uri(path.path));
     final response = await request.close();
-    final text = await response.transform(utf8.decoder).join();
-    final json = jsonDecode(text);
-    return json;
+    if (response.statusCode == 200) {
+      final text = await response.transform(utf8.decoder).join();
+      final json = jsonDecode(text);
+      return json;
+    } else {
+      throw Exception(response.reasonPhrase);
+    }
   }
 
   Future<dynamic> post(NetworkPath path, {Map<String, dynamic>? parameter}) async {

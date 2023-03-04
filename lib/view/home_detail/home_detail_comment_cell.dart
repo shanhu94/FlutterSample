@@ -9,9 +9,7 @@ class HomeDetailCommentCell extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Theme.of(context).colorScheme.background,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Container(
           decoration: BoxDecoration(
             color: Theme.of(context).colorScheme.background,
@@ -23,15 +21,19 @@ class HomeDetailCommentCell extends StatelessWidget {
             comment.icon,
             width: 44,
             height: 44,
+            fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
               return Image.asset(
                 'images/default_icon.jpeg',
                 width: 44,
                 height: 44,
+                fit: BoxFit.cover,
               );
             },
           ),
         ),
+        // 文本超出布局范围, 或其他元素超出布局范围, 可尝试使用Expanded限制其无限延伸的宽度或高度
+        // Expanded 包住Column , 可以让Column内部的元素不会超出布局边缘
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
