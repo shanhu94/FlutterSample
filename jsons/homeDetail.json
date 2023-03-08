@@ -1,0 +1,28 @@
+{
+    "code": 0,
+    "result": {
+        "content": {
+            "title": "物品3",
+            "content": "物品的简易介绍",
+            "labels": ["label1", "label2"],
+            "icon": "https://img0.baidu.com/it/u=1705694933,4002952892&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281"
+        },
+        "comment": [
+            {
+                "icon": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F27%2F20210627172214_c6be1.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1679816579&t=ce88317f9face10084d427c1119590fc",
+                "nickname": "测试员",
+                "content": "测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息"
+            },
+            {
+                "icon": "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fblog%2F202106%2F27%2F20210627172214_c6be1.thumb.1000_0.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1679816579&t=ce88317f9face10084d427c1119590fc",
+                "nickname": "测试员2",
+                "content": "测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息"
+            },
+            {
+                "icon": "",
+                "nickname": "测试员3",
+                "content": "测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息测试回复消息"
+            }
+        ]
+    }
+}

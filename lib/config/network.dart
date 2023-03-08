@@ -5,9 +5,12 @@ class NetworkPath {
   final String path;
   const NetworkPath(this.path);
   static NetworkPath get homeList => const NetworkPath('jsons/home.json');
-  static NetworkPath get homeDetail => const NetworkPath('jsons/homeDetail.json');
+  static NetworkPath get homeDetail =>
+      const NetworkPath('jsons/homeDetail.json');
   static NetworkPath get chatList => const NetworkPath('jsons/chatList.json');
-  static NetworkPath get messageList => const NetworkPath('jsons/messageList.json');
+  static NetworkPath get messageList =>
+      const NetworkPath('jsons/messageList.json');
+  static NetworkPath get mine => const NetworkPath('jsons/mine.json');
 }
 
 class Network {
@@ -18,6 +21,7 @@ class Network {
   }
 
   Future<dynamic> get(NetworkPath path) async {
+    File(path.path);
     final request = await client.getUrl(uri(path.path));
     final response = await request.close();
     if (response.statusCode == 200) {
@@ -29,7 +33,8 @@ class Network {
     }
   }
 
-  Future<dynamic> post(NetworkPath path, {Map<String, dynamic>? parameter}) async {
+  Future<dynamic> post(NetworkPath path,
+      {Map<String, dynamic>? parameter}) async {
     final request = await client.postUrl(uri(path.path));
     if (parameter != null) {
       request.write(jsonEncode(parameter));
@@ -40,5 +45,3 @@ class Network {
     return json;
   }
 }
-
-

@@ -1,0 +1,32 @@
+{
+    "code": 0,
+    "result": {
+        "list": [
+            {
+                "name": "测试员1",
+                "lastMsgContent": "接收到一条消息",
+                "icon": "https://img0.baidu.com/it/u=1705694933,4002952892&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281"
+            },
+            {
+                "name": "测试员2",
+                "lastMsgContent": "接收到一条消息",
+                "icon": "https://img0.baidu.com/it/u=1705694933,4002952892&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281"
+            }, 
+            {
+                "name": "测试员3",
+                "lastMsgContent": "接收到一条消息",
+                "icon": "https://img0.baidu.com/it/u=1705694933,4002952892&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281"
+            },
+            {
+                "name": "测试员4",
+                "lastMsgContent": "接收到一条消息",
+                "icon": "https://img0.baidu.com/it/u=1705694933,4002952892&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=281"
+            },
+            {
+                "name": "测试员5",
+                "lastMsgContent": "接收到一条很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的消息",
+                "icon": ""
+            }
+        ]
+    }
+}

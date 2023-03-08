@@ -1,0 +1,35 @@
+{
+    "code": 0,
+    "result": {
+        "list": [
+            {
+                "sendId": "1",
+                "receiveId": "2",
+                "type": "text",
+                "time": 1677774439000,
+                "content": "测试消息, 消息内容"
+            },
+            {
+                "sendId": "1",
+                "receiveId": "2",
+                "type": "text",
+                "time": 1677774439000,
+                "content": "测试消息, 消息内容"
+            },
+            {
+                "sendId": "1",
+                "receiveId": "2",
+                "type": "video",
+                "time": 1677774439000,
+                "content": "测试消息, 消息内容"
+            },
+            {
+                "sendId": "2",
+                "receiveId": "1",
+                "type": "text",
+                "time": 1677774439000,
+                "content": "测试消息, 消息内容"
+            }
+        ]
+    }
+}
